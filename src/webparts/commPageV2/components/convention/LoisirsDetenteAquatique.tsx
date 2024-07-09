@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export default function LoisirsDetenteAquatique() {
   return (
-    <div style={{ listStyleType: 'none', padding: 0, marginBottom: '20px' }}>
+    <div style={{ listStyleType: 'none', padding: 0, marginBottom: '20px', maxWidth: '1288px', margin: '0 auto' }}>
       <div>
         <h2  style={{ marginBottom: '40px' }}>Convention de Partenariat avec Les 3 Sources Belair</h2>
         <img

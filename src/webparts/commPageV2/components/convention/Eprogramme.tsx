@@ -64,7 +64,6 @@ const Convention: React.FC = () => {
 
     const hotels = [
 
-        { name: "SUMSUNG", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'SUMSUNG.jpg\')/$value' },
 
 
         { name: "shiseido", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'shiseido.png\')/$value' },
@@ -82,15 +81,10 @@ const Convention: React.FC = () => {
 
         { name: "brabantia", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'brabantia.jpg\')/$value' },
 
-        { name: "oster", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'oster.png\')/$value' },
 
         { name: "lenovo", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'lenovo.png\')/$value' },
 
         { name: "irobot", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'irobot.jpg\')/$value' },
-
-        { name: "logitech", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'logitech.png\')/$value' },
-
-        { name: "taurus", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'asus.png\')/$value' },
 
         { name: "dercos", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'dercos.png\')/$value' },
 
@@ -102,7 +96,7 @@ const Convention: React.FC = () => {
     ];
 
     return (
-        <div className={styles.EpContainer}>
+        <div className={styles.EpContainer} style={{ lineHeight: '1.6', maxWidth: '1288px', margin: '0 auto' }}>
             <a href="https://eProgram.ma"
                 style={{
                     color: 'blue',
@@ -117,6 +111,18 @@ const Convention: React.FC = () => {
                 }}>
                 eProgram.ma
             </a>
+            <img
+                src="https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl('/sites/CnexiaForEveryone/Assets/Eprogramme')/Files('eProgram.png')/$value"
+                alt="eProgram Image"
+                style={{
+                  display: 'block',
+                  height: '300px',
+                  margin: '0 auto',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  marginBottom: '40px'
+                }}
+              />
             <h2 style={{ textAlign: 'center' }}>Nos Conventions actives</h2><br />
 
             <div className={styles.ImageContainer} style={{ marginBottom: '40px' }}>
@@ -157,7 +163,7 @@ const Convention: React.FC = () => {
 
 
             <div className={styles.space}></div>
-            <div className={styles.hotelsContainer}>
+            <div className={styles.ConvContainer}>
                 {hotels.map((hotel, index) => (
                     <Hotel key={index} name={hotel.name} imageUrl={hotel.imageUrl} />
                 ))}

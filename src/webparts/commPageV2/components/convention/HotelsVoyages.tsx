@@ -95,7 +95,8 @@ const HotelsVoyages: React.FC = () => {
     };
 
     return (
-        <div style={{ marginBottom: '40px' }}>
+        <div style={{ marginBottom: '40px' ,maxWidth: '1288px', margin: '0 auto'}}>
+
             <div style={{ marginBottom: '40px' }}>
                 <h3 style={{ marginBottom: '40px' }}>1. Conventions hôtelières: </h3>
                 <br />

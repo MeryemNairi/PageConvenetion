@@ -83,6 +83,11 @@ h6 {
   flex-wrap: wrap;
 }
 
+.ConvContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hotel {
   margin: 10px;
   padding: 20px;
@@ -92,8 +97,8 @@ h6 {
 }
 
 .imageContainer {
-  width: 100px;
-  height: 100px;
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Adjust the size as needed */
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 10px;

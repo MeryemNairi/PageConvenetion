@@ -1,17 +1,14 @@
 import * as React from 'react';
 import HotelsVoyages from './HotelsVoyages';
-//import ImmobilierLogement from './ImmobilierLogement';
-//import SolutionsAssurance from './SolutionsAssurance';
 import MaisonArtCulinaire from './MaisonArtCulinaire';
 import LoisirsDetenteAquatique from './LoisirsDetenteAquatique';
 import Eprogramme from './Eprogramme';
 import { sp } from "@pnp/sp";
 
-
 const categories = [
   {
     id: 8,
-    name: 'Hôtels  & Voyages',
+    name: 'Hôtels & Voyages',
     icon: (
       <svg width="25" height="25" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_30_25)">
@@ -25,7 +22,6 @@ const categories = [
       </svg>
     )
   },
-
 
   {
     id: 5, name: 'Maison & Art Culinaire',
@@ -53,23 +49,18 @@ const categories = [
   {
     id: 7, name: 'eProgram',
     icon: (<svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 6H17C17 3.2 14.8 1 12 1C9.2 1 7 3.2 7 6H5C3.9 6 3 6.9 3 8V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V8C21 6.9 20.1 6 19 6ZM12 3C13.7 3 15 4.3 15 6H9C9 4.3 10.3 3 12 3ZM19 20H5V8H19V20ZM12 12C10.3 12 9 10.7 9 9H7C7 11.8 9.2 14 12 14C14.8 14 17 11.8 17 9H15C15 10.7 13.7 12 12 12Z" fill="#00966C"/>
-      </svg>
-      
+      <path d="M19 6H17C17 3.2 14.8 1 12 1C9.2 1 7 3.2 7 6H5C3.9 6 3 6.9 3 8V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V8C21 6.9 20.1 6 19 6ZM12 3C13.7 3 15 4.3 15 6H9C9 4.3 10.3 3 12 3ZM19 20H5V8H19V20ZM12 12C10.3 12 9 10.7 9 9H7C7 11.8 9.2 14 12 14C14.8 14 17 11.8 17 9H15C15 10.7 13.7 12 12 12Z" fill="#00966C" />
+    </svg>
+
 
     )
   },
-
-
-
 ];
-
 
 export default function Convention() {
   const [selectedCategory, setSelectedCategory] = React.useState<string>("");
   const [, setCategorySelected] = React.useState<boolean>(false);
   const [username, setUsername] = React.useState<string>("");
-
 
   React.useEffect(() => {
     sp.web.currentUser.get().then(user => {
@@ -78,7 +69,6 @@ export default function Convention() {
       console.error('Erreur lors de la récupération du nom d\'utilisateur SharePoint :', error);
     });
   }, []);
-
 
   const handleCategoryClick = (categoryName: string) => {
     setSelectedCategory(categoryName);
@@ -89,7 +79,6 @@ export default function Convention() {
     setSelectedCategory("");
     setCategorySelected(false);
   };
-
 
   return (
     <div>
@@ -105,15 +94,15 @@ export default function Convention() {
             cursor: 'pointer',
             width: '100%'
           }}>
-            <div style={{
-              textAlign: 'center'
-            }}>
+            <div style={{ textAlign: 'center' }}>
               <span>&nbsp;</span>
               <span>&nbsp;</span>
-              <h3 style={{ fontWeight: 'bold', }}>
+              <h3 style={{ fontWeight: 'bold' }}>
                 Bienvenue {username} !
               </h3>
-              <p style={{ fontSize: '20px', fontWeight: 'bold' }}>Plongez avec nous dans l'univers des pratiques conventionnelles réinventées par Cnexia.</p>
+              <p style={{ fontSize: '20px', fontWeight: 'bold' }}>
+                Plongez avec nous dans l'univers des pratiques conventionnelles réinventées par Cnexia.
+              </p>
             </div>
           </div>
 
@@ -136,7 +125,7 @@ export default function Convention() {
                 >
                   <svg width="44" height="38" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_1_11" maskUnits="userSpaceOnUse" x="0" y="0" width="44" height="38">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M42 35.836C37.107 29.863 32.762 26.474 28.964 25.668C25.167 24.863 21.552 24.741 18.118 25.303V36L2 18.545L18.118 2V12.167C24.467 12.217 29.864 14.495 34.31 19C38.755 23.505 41.319 29.117 42 35.836Z" fill="#555555" stroke="white" stroke-width="4" stroke-linejoin="round" />
+                      <path fillRule="evenodd" clipRule="evenodd" d="M42 35.836C37.107 29.863 32.762 26.474 28.964 25.668C25.167 24.863 21.552 24.741 18.118 25.303V36L2 18.545L18.118 2V12.167C24.467 12.217 29.864 14.495 34.31 19C38.755 23.505 41.319 29.117 42 35.836Z" fill="#555555" stroke="white" strokeWidth="4" strokeLinejoin="round" />
                     </mask>
                     <g mask="url(#mask0_1_11)">
                       <path d="M-2 -5H46V43H-2V-5Z" fill="#03B586" />
@@ -162,6 +151,7 @@ export default function Convention() {
                   }}
                 >
                   {category.icon}
+
                   <span style={{ marginLeft: '10px' }}>{category.name}</span>
                 </div>
               ))}
@@ -169,21 +159,20 @@ export default function Convention() {
           </div>
         </div>
         <div style={{ flex: 1, padding: '20px', overflowY: 'auto' }}>
-
           {selectedCategory ? (
             <>
-              <h1 style={{
-                textAlign: 'center',
-                width: '100%',
-                fontSize: '40',
-                marginBottom: '20px',
-              }}>{selectedCategory}</h1>
-              {selectedCategory === 'Hôtels  & Voyages' && <HotelsVoyages />}
+              {selectedCategory !== 'eProgram' && (
+                <h1 style={{
+                  textAlign: 'center',
+                  width: '100%',
+                  fontSize: '40',
+                  marginBottom: '20px',
+                }}>{selectedCategory}</h1>
+              )}
+              {selectedCategory === 'Hôtels & Voyages' && <HotelsVoyages />}
               {selectedCategory === 'Maison & Art Culinaire' && <MaisonArtCulinaire />}
               {selectedCategory === 'Loisirs & Détente Aquatique' && <LoisirsDetenteAquatique />}
               {selectedCategory === 'eProgram' && <Eprogramme />}
-
-
             </>
           ) : (
             <div>
@@ -193,25 +182,15 @@ export default function Convention() {
                 fontSize: '40',
               }}><strong>Découvrez l'univers des conventions avec Cnexia</strong></h1>
               <img
-
                 src="https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl('/sites/CnexiaForEveryone/Assets')/Files('convention-removebg-preview.png')/$value"
-
                 alt="Convention Image"
-
                 style={{
-
                   display: 'block',
-
                   height: '300px',
-
                   margin: '0 auto',
-
                   objectFit: 'cover',
-
                   objectPosition: 'center'
-
                 }}
-
               />
               <div>
                 <p style={{ fontSize: '15px', fontWeight: 600, marginBottom: '10px' }}>
@@ -239,12 +218,10 @@ export default function Convention() {
                   <li>En cas de doute ou pour toute question relative aux conventions et aux avantages, n'hésitez pas à contacter le service des ressources humaines.</li>
                 </ul>
               </div>
-
             </div>
           )}
         </div>
       </div>
     </div>
   );
-
 }
