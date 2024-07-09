@@ -99,7 +99,7 @@ const Convention: React.FC = () => {
         <div className={styles.EpContainer} style={{ lineHeight: '1.6', maxWidth: '1288px', margin: '0 auto' }}>
             <a href="https://eProgram.ma"
                 style={{
-                    color: 'blue',
+                    color: '#74A7F9',
                     textDecoration: 'underline',
                     textAlign: 'center',
                     fontWeight: 'bold',
