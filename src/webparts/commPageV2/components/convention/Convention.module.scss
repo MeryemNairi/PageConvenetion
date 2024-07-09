@@ -1,0 +1,186 @@
+  /* Le contenu du slide eprogramme */
+  .EpContainer{
+   
+    width: 100%;
+    height: 100%;
+  } 
+
+.carouselContainer {
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+
+  .carouselImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+
+
+.ImageContainer {
+  width: 60%;
+  height: 200px;
+  background-color: #000000;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.image_holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Assure que l'image ne dépasse pas les limites du conteneur */
+  position: relative;
+}
+
+.image_holder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajuste l'image sans déformer en conservant son aspect ratio */
+  display: block;
+  margin: auto; /* Centre l'image horizontalement */
+}
+
+
+.Navigation_btn {
+  position: absolute;
+  width: 95%;
+  top: 45%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.prevBtn, .nextBtn {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: .2s ease;
+}
+
+
+  /* Le contenu ... */
+// Convention.module.scss
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #002920;
+}
+
+.hotelsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotel {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.imageContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #888;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cityButton {
+  background-color: #58c1a3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cityButton:hover {
+  transform: scale(1.05);
+}
+
+.hotelsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); /* Ajuster la taille minimale des colonnes */
+  gap: 5px; 
+}
+
+
+
+
+
+.headerImage {
+  width:100%;
+  height: 500px;
+  margin-right: 20px;
+}
+
+.headerContent {
+  flex: 1;
+  /* Le contenu prendra tout l'espace disponible */
+}
+
+.headerContent h2 {
+  font-size: 24px;
+  /* Taille de la police du titre */
+  margin-bottom: 10px;
+  /* Espace en bas du titre */
+}
+
+.headerContent p {
+  margin-bottom: 10px;
+  /* Espace entre les paragraphes */
+}
+
+.paragraph {
+  margin-top: 10px;
+  /* Ajoute un espace en haut des paragraphes */
+  line-height: 1.6;
+  /* Espacement des lignes pour une meilleure lisibilité */
+}
+.space {
+  margin-bottom: 50px; /* Par exemple, ajustez la marge selon vos besoins */
+}
