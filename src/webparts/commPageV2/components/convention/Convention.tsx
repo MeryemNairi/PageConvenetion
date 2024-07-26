@@ -175,7 +175,7 @@ export default function Convention() {
               {selectedCategory === 'eProgram' && <Eprogramme />}
             </>
           ) : (
-            <div>
+            <div  style={{ lineHeight: '1.6', maxWidth: '1288px', margin: '0 auto' }}>
               <h1 style={{
                 textAlign: 'center',
                 width: '100%',

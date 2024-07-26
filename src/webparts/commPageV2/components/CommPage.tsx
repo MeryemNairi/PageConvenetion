@@ -3,7 +3,7 @@ import  { useEffect, useRef } from 'react';
 //import styles from './CommPage.module.scss';
 import { WebPartContext } from '@microsoft/sp-webpart-base';
 
-import Footer from './Footer/footer';
+import Footer from './NewFooter/Footer';
 import Navbar from './Header/navbar';
 import Convention from './convention/Convention';
 
